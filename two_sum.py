@@ -20,17 +20,17 @@ class Solution:
         result = []
         
         for i in range(len(nums)-1):
-            for j in range(len(nums)-1):
-                if nums[i] + nums[j+1] == target:
+            for j in range(i+1, len(nums)-1):
+                if nums[i] + nums[j] == target:
                    result.append(i)
-                   result.append(j+1)
+                   result.append(j)
                    break
         
         return result               
         
         
-nums = [2,7,11,15]
-target = 17
+nums = [2,5,5,11]
+target = 10
 solve = Solution()
 res = solve.twoSum(nums, target) 
 print(res)                  
