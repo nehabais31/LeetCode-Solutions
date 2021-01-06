@@ -24,7 +24,6 @@ s2 = 'pwwkew'
 s3 = 'bbbbb'
 s4 = ''
 
-
 sol = Solution()
 res1 = sol.lengthOfLongestSubstring(s1)
 print(f'Longest length of subsring in {s1}: {res1}\n')
