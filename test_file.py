@@ -1,13 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 29 10:51:53 2021
+import sys
+from pyspark import SparkContext
 
-@author: Home
-"""
+# Print the script name
+print("PySpark Script: ", sys.argv[0])
 
-from pyspark import SparkContext as sc
+# Create a spark context and print some information about the context object
+sc = SparkContext()
+print(sc.version)
+print(sc.pythonVer)
+print(sc.master)
 
-
-rdd = sc.parallelize(["b", "c", "a"])
-output = sorted(rdd.map(lambda x: (x,1))).collect()
-print(output)
+# Free the spark context object
+sc.stop()
+print("end")
