@@ -22,5 +22,5 @@ strs = ["flower","flow","flight"]
 strs1 = ["dog","racecar","car"]
       
 sol = Solution()
-result = sol.longestCommonPrefix(strs1)    
+result = sol.longestCommonPrefix(strs)    
 print(result)            

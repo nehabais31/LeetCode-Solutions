@@ -17,10 +17,10 @@ def loadTheCargo(num, containers, itemSize, itemsPerContainer, cargoSize):
     return sum(max_items)
 
 num= 3
-containers=[1, 2, 3]
+containers=[3,1,6]
 itemSize=3
-itemsPerContainer=[3, 2, 1]
-cargoSize=3
+itemsPerContainer=[2,7,4]
+cargoSize=6
 
 print(loadTheCargo(num, containers, itemSize, itemsPerContainer, cargoSize))
                   
