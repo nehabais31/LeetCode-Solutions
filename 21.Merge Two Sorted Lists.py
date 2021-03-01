@@ -69,18 +69,24 @@ list2 = Linked_List()
 list1.add_elements(1) 
 list1.add_elements(4)
 list1.add_elements(8)
+print('List 1: ', end = ' ')
+list1.print_list()
+print()
 
 list2.add_elements(1)
 list2.add_elements(2)
 list2.add_elements(3)
 list2.add_elements(5)
 list2.add_elements(9)        
+print('List 2: ', end = ' ')
+list2.print_list()
+print()
 
 res = Solution()
 list1.head = res.merge_lists(list1.head, list2.head)
+print('Merged Lists: ', end = ' ')
 list1.print_list()
-            
-             
+print()
              
              
 
