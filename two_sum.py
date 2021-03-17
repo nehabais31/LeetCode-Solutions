@@ -17,17 +17,29 @@ class Solution:
         -------
         result: List[int]
         '''
-        result = []
+        seen_nums = {}
         
-        for i in range(len(nums)-1):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] == target:
-                   result.append(i)
-                   result.append(j)
-                   break
-        
-        return result               
-        
+        for i, n  in enumerate(nums):
+            diff = target - n
+            if diff in seen_nums:
+                return [seen_nums[diff], i]
+            else:
+                seen_nums[n] = i
+        return
+    
+# =============================================================================
+#         result = []
+#         
+#         for i in range(len(nums)-1):
+#             for j in range(i+1, len(nums)):
+#                 if nums[i] + nums[j] == target:
+#                    result.append(i)
+#                    result.append(j)
+#                    break
+#         
+#         return result               
+#         
+# =============================================================================
         
 nums = [3,2,4]
 target = 6

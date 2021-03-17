@@ -1,33 +1,40 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Feb 10 18:34:03 2021
+Given a string s, return the longest palindromic substring in s.
 
-@author: Home
 """
 
+
 class Solution:
-    def longestPalindrome(self, s):
-        res = ""
+    def longestPalindrome(self, s: str) -> str:
+        
+        if len(s) == 1:
+            return s
+        
+        res = ''
+        
         for i in range(len(s)):
+            # odd nbr of chars in string
+            odd  = self.checkPalindrome(s, i, i)
+            even = self.checkPalindrome(s, i, i+1)
             
-            tmp = self.helper(s, i, i)
-            if len(tmp) > len(res):
-                res = tmp
+            res = max(res, odd, even, key=len)
             
-            tmp = self.helper(s, i, i+1)
-            if len(tmp) > len(res):
-                res = tmp
-        return res
-     
-    # get the longest palindrome, l, r are the middle indexes   
-    # from inner to outer
-    def helper(self, s, l, r):
-        while l >= 0 and r < len(s) and s[l] == s[r]:
-            l -= 1; r += 1
-        return s[l+1:r]  
-        
-print(Solution().longestPalindrome("cbbd"))    
-        
-        
-        
+        return res 
     
+    
+    def checkPalindrome(self, s, left, right):
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        return s[left+1 : right]
+    
+
+sol = Solution()
+
+print(sol.longestPalindrome("bb"))
+print(sol.longestPalindrome('ababb'))
+print(sol.longestPalindrome('babad'))
+print(sol.longestPalindrome(''))
+print(sol.longestPalindrome('a'))
+print(sol.longestPalindrome('ac'))
