@@ -38,7 +38,7 @@ class Solution:
             return res      
             
         num1_nbr =  map_str_nbr(num1)
-        num2_nbr = map_str_nbr(num2)
+        num2_nbr =  map_str_nbr(num2)
 
         result = num1_nbr * num2_nbr
         return str(result)    
