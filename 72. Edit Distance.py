@@ -16,3 +16,7 @@ sorted_word2 = ''.join(sorted_char_w2)
 
 print(sorted_word1)
 print(sorted_word2)
+
+if len(sorted_word2) > len(sorted_word1):
+    if sorted_word1 in sorted_word2:
+        return 
