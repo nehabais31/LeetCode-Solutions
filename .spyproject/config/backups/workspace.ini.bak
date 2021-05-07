@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['43. Multiply Strings.py', '49. Group Anagrams.py', '65. Valid Number.py']
+recent_files = ['..\\..\\Spring2021\\Data Mining\\MidTerm Prepartion\\apriori_algorithm.py']
 
