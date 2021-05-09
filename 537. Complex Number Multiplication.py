@@ -1,5 +1,7 @@
 class Solution:
     def complexNumberMultiply(self, num1: str, num2: str) -> str:
+        # (a + bi) * (x + iy) = (ax - by) + i(ay + bx)
+
         num1_list = num1.split('+')
         num2_list = num2.split('+')
 
