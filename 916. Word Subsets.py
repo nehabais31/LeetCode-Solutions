@@ -10,7 +10,7 @@ class Solution:
         import collections
         count = collections.Counter()
         for word in B:
-            count |= collections.Counter(word)  # union |= -> to merge results for each word
+            count |= collections.Counter(word)  # union |= -> to merge results for each 
             
         res = []
         for word in A:
